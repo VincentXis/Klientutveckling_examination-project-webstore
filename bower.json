@@ -1,7 +1,6 @@
 {
   "name": "klientutveckling-webstore",
   "description": "examination project",
-  "main": "index.js",
   "authors": [
     "Rickard Bernal"
   ],
