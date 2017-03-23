@@ -1,10 +1,10 @@
 <nav class="navbar navbar-inverse navbar-static-top" ng-controller="menuController">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="/">angdroidular Auctions</a>
+            <a class="navbar-brand" href="/">Gunhilds Clothing</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="/auctions">Auktioner</a></li>
+            <li><a href="/auctions">Produkter</a></li>
             <li uib-dropdown>
                 <a href id="simple-dropdown-cat" uib-dropdown-toggle role="button">Kategorier <span class="caret"></span></a>
                 <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown-cat">
@@ -14,28 +14,24 @@
             <li>
                 <form class="navbar-form navbar-left" name="searchForm" novalidate>
                     <div class="form-group">
-                        <input type="text" class="form-control bg-faded" placeholder="search" ng-model="searchQuery" required>
+                        <input type="text" class="form-control" placeholder="search" ng-model="searchQuery" required>
                     </div>
                     <button ng-click="search()" type="submit" class="btn btn-default" ng-disabled="searchForm.$invalid"><span class="glyphicon glyphicon-search"></span></button>
                 </form>
-            </li>
-            <li ng-if="admin">
-                <a href="/admin">Administration</a>
             </li>
         </ul>
 
         <span class="navbar-right" ng-show="loggedIn">
             <p class="navbar-text">
                 <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                {{ userFullName }}
             </p>
-            <button type="button" class="btn btn-warning navbar-btn" ng-click="logout()">Logout</button>
+            <button type="button" class="btn btn-warning navbar-btn" ng-click="logout()">Logga ut</button>
         </span>
         <span class="navbar-right" ng-show="!loggedIn">
             <button type="button" class="btn btn-info navbar-btn"
-                    ng-click="signup()">Sign up</button>
+                    ng-click="register()">skapa nytt konto</button>
             <button type="button" class="btn btn-success navbar-btn"
-                    ng-click="login()">Sign in</button>
+                    ng-click="login()">Logga in</button>
         </span>
     </div>
 </nav>
