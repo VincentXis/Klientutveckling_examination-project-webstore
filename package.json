@@ -1,0 +1,14 @@
+{
+  "name": "klientutveckling-webstore",
+  "version": "1.0.0",
+  "description": "examination project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rickard Bernal",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
