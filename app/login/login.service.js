@@ -1,7 +1,6 @@
 angular.module("login").factory("loginService", ["$http", "$location", "$rootScope", function ($http, $location, $rootScope) {
     var userData = {};
     var userLoggedIn = false;
-    $rootScope.loginLocation = "/";
 
     return {
         login: function (user) {

@@ -15,6 +15,9 @@ angular.module("app").config(["$routeProvider", "$locationProvider", function ($
         .when("/product/:id", {
             template: "<product-details></product-details>"
         })
+        .when("/checkout", {
+            template: "<checkout></checkout>"
+        })
         .otherwise({template: "<home></home>"});
     $locationProvider.html5Mode(true);
 }]);

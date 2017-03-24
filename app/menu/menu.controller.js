@@ -11,7 +11,6 @@ angular.module("app").controller('menuController', ["$scope", "$rootScope", "$lo
         });
 
         $scope.login = function () {
-            $rootScope.loginLocation = $location.path();
             $location.path("/login");
         };
 
