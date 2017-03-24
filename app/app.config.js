@@ -9,6 +9,12 @@ angular.module("app").config(["$routeProvider", "$locationProvider", function ($
         .when("/register", {
             template: "<register></register>"
         })
+        .when("/products", {
+            template: "<product-list></product-list>"
+        })
+        .when("/product/:id", {
+            template: "<product-details></product-details>"
+        })
         .otherwise({template: "<home></home>"});
     $locationProvider.html5Mode(true);
 }]);

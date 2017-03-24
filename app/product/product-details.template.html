@@ -1,0 +1,29 @@
+<div class="col-md-12">
+    <div class="col-md-6">
+        <img ng-src="{{ product.imageUrl }}" class="img-thumbnail">
+    </div>
+    <div class="col-md-6">
+        <div class="col-md-12 border-rounded bg-darker">
+            <h3>{{product.name}}</h3>
+            <h4>{{product.description}}</h4>
+        </div>
+
+        <div class="col-md-12 border-rounded bg-darker">
+            <h4>Pris: {{product.price}} kr</h4>
+            <h4>Antal i lager: {{product.unitsInStock}} st</h4>
+        </div>
+
+        <div class="col-md-12 border-rounded bg-darker padContent">
+            <form class="form-group">
+                <div class="col-md-2"><h4>Antal:</h4></div>
+                <div class="col-md-6">
+                    <input class="form-control" type="text" id="amount" ng-model="amount">
+                </div>
+                <div class="col-md-2">
+                    <a class="btn btn-default" role="button">Lägg till i kundvagn</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
