@@ -4,6 +4,12 @@ angular.module("product").controller("productDetailsController", ["$scope", "$ro
     productService.getProductById($routeParams.id).then(function (response) {
         $scope.product = response.data;
     });
-
+    $scope.countCheck = function () {
+        if ($scope.product.unitsInStock == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }]);

@@ -10,8 +10,8 @@
                             <td class="col-md-4"><img ng-src="{{ product.imageUrl }}" class="img-thumbnail"></td>
                             <td class="col-md-8 ">
                                 <h3>{{product.name }}</h3>
-                                <h4>Pris: {{product.price}}</h4>
-                                <div ng-hide="countCheck(product.unitsInStock)">Slut i lager</div>
+                                <h4>Pris: {{product.price}} kr</h4>
+                                <div ng-hide="countCheck(product.unitsInStock)"><br><h2 class="text-danger">Slut i lager</h2></div>
                             </td>
                         </tr>
                     </tbody>

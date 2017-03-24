@@ -15,10 +15,10 @@ angular.module("product").controller("productListController", ["$scope", "$route
         $location.path("/product/" + id);
     }
     $scope.countCheck = function (amount) {
-        if (amount > 0) {
-            return true;
-        } else {
+        if (amount == 0) {
             return false;
+        } else {
+            return true;
         }
     }
 }]);
