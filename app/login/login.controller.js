@@ -7,9 +7,7 @@ angular.module("login").controller("loginController", ["$scope", "$location", "$
     }
 
     $scope.login = function () {
-
         $scope.loginClicked = true;
-
         var user = {
             email: $scope.email,
             password: $scope.password
@@ -18,6 +16,5 @@ angular.module("login").controller("loginController", ["$scope", "$location", "$
         loginService.login(user).then(function () {
             $scope.loginClicked = false;
         });
-
     }
 }]);

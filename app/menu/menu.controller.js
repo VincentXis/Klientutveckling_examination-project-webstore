@@ -22,11 +22,10 @@ angular.module("app").controller('menuController', ["$scope", "$rootScope", "$lo
         $scope.logout = function () {
             loginService.logout();
         };
-        //
-        //
-        // $scope.search = function () {
-        //     $location.path("/auctions/search/" + $scope.searchQuery);
-        // };
+
+        $scope.search = function () {
+            $location.path("/product/search/" + $scope.searchQuery);
+        };
 
         $scope.$watch(function () {
             return loginService.isLoggedIn();
@@ -34,10 +33,7 @@ angular.module("app").controller('menuController', ["$scope", "$rootScope", "$lo
             $scope.loggedIn = !!value;
         });
 
-        // $scope.$watch(function () {
-        //     return loginService.getUserFullName();
-        // }, function (newValue, oldValue) {
-        //     $scope.userFullName = newValue;
-        // })
-        //
+        $scope.checkout = function () {
+            $location.path("/checkout");
+        }
     }]);

@@ -9,11 +9,17 @@ angular.module("app").config(["$routeProvider", "$locationProvider", function ($
         .when("/register", {
             template: "<register></register>"
         })
+        .when("/product/:id", {
+            template: "<product-details></product-details>"
+        })
         .when("/products", {
             template: "<product-list></product-list>"
         })
-        .when("/product/:id", {
-            template: "<product-details></product-details>"
+        .when("/product/category/:category", {
+            template: "<product-list></product-list>"
+        })
+        .when("/product/search/:search", {
+            template: "<product-list></product-list>"
         })
         .when("/checkout", {
             template: "<checkout></checkout>"

@@ -4,7 +4,7 @@
         <div class="col-md-10">
             <div class="col-md-12">
                 <table class="table table-hover">
-                    <tbody ng-repeat="product in products">
+                    <tbody ng-repeat="product in products | limitProducts:limitByCategory:limitBySearch">
                         <tr class="hover"
                             ng-click="showProduct(product.id)">
                             <td class="col-md-4"><img ng-src="{{ product.imageUrl }}" class="img-thumbnail"></td>

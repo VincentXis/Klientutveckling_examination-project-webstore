@@ -8,7 +8,7 @@
             <li uib-dropdown>
                 <a href id="simple-dropdown-cat" uib-dropdown-toggle role="button">Kategorier <span class="caret"></span></a>
                 <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown-cat">
-                    <li ng-repeat="category in categories"><a href="/auctions/category/{{ category.id }}">{{category.name}}</a></li>
+                    <li ng-repeat="category in categories"><a href="/product/category/{{category.id}}">{{category.name}}</a></li>
                 </ul>
             </li>
             <li>
@@ -23,7 +23,7 @@
 
         <div class="navbar-right" >
             <button type="button" class="btn btn-success navbar-btn"
-                    ng-show="loggedIn" ng-click="">Kundvagn</button>
+                    ng-show="loggedIn" ng-click="checkout()">Kundvagn</button>
 
             <button type="button" class="btn btn-warning navbar-btn"
                     ng-show="loggedIn" ng-click="logout()">Logga ut</button>
@@ -37,3 +37,4 @@
         </div>
     </div>
 </nav>
+

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="col-md-12 border-rounded bg-darker padContent"
+                 ng-hide="showSuccessMessage">
+                <div class="col-md-6">
+                    <h3>Kundvagn</h3>
+                </div>
+                <div class="col-md-6 padContent">
+                    <div ng-show="productCart.length > 0">
+                        <a class="btn btn-success" ng-click="placeOrder()" role="button">Lägg order</a>
+                        <button class="btn btn-danger" ng-click="resetProductCart()" role="button">Töm kundvagn</button>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <tr ng-repeat="product in productCart">
+                            <td>
+                                Product: {{product.name}}
+                            </td>
+                            <td>
+                                Pris: {{product.price}} kr/st
+                            </td>
+                            <td>
+                                Antal: {{product.quantity}}
+                            </td>
+                        </tr>
+                        <tr ng-show="cartIsEmpty()">
+                            <td>Kundvagnen är tom</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-12" ng-show="!cartIsEmpty()">
+                    <h4>Totalbelopp: {{orderTotal}} kr</h4>
+                </div>
+            </div>
+            <div class="col-md-12 border-rounded bg-darker padContent"
+                 ng-show="showSuccessMessage">
+                <p class="lead padContent text-center">Tack din order är nu skickad</p>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
