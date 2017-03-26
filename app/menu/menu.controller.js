@@ -6,25 +6,16 @@ angular.module("app").controller('menuController', ["$scope", "$rootScope", "$lo
         categoryService.getCategories().then(function (response) {
             var categories = response.data;
             angular.forEach(categories, function (category) {
-                $scope.categories.push(category)
-            })
+                $scope.categories.push(category);
+            });
         });
 
         $scope.login = function () {
             $location.path("/login");
         };
 
-        $scope.register = function () {
-            $rootScope.loginLocation = $location.path();
-            $location.path("/register");
-        };
-
         $scope.logout = function () {
             loginService.logout();
-        };
-
-        $scope.search = function () {
-            $location.path("/product/search/" + $scope.searchQuery);
         };
 
         $scope.$watch(function () {
@@ -32,6 +23,15 @@ angular.module("app").controller('menuController', ["$scope", "$rootScope", "$lo
         }, function (value) {
             $scope.loggedIn = !!value;
         });
+
+        $scope.search = function () {
+            $location.path("/product/search/" + $scope.searchQuery);
+        };
+
+        $scope.register = function () {
+            $rootScope.loginLocation = $location.path();
+            $location.path("/register");
+        };
 
         $scope.checkout = function () {
             $location.path("/checkout");
